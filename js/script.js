@@ -15,13 +15,42 @@ const skillsData = [
     // ... add more skills
 ];
 
+// ... (other code)
+
+// Skills data
+const skillsData = [
+    { name: "AEM", level: "Expert" },
+    { name: "Java", level: "Advanced" },
+    { name: "HTML", level: "Advanced" },
+    { name: "CSS", level: "Advanced" },
+    { name: "Bootstrap", level: "Intermediate" },
+    { name: "JavaScript", level: "Intermediate" },
+    { name: "Spring MVC", level: "Intermediate" },
+    { name: "Spring Boot", level: "Intermediate" },
+    { name: "HTL", level: "Advanced" },
+    { name: "JSP", level: "Intermediate" },
+    { name: "MySQL", level: "Basic" },
+    { name: "Oracle", level: "Basic" },
+    // ... add more skills
+];
+
 const skillsContainer = document.querySelector(".skills-container");
 
 skillsData.forEach(skill => {
     const skillElement = document.createElement("div");
-    skillElement.textContent = `${skill.name};
+    skillElement.classList.add("skill-item"); // Add a class for styling
+
+    // Create the skill name element
+    const skillName = document.createElement("span");
+    skillName.classList.add("skill-name");
+    skillName.textContent = skill.name;
+    skillElement.appendChild(skillName);
+    
     skillsContainer.appendChild(skillElement);
 });
+
+// ... (rest of your script.js)
+
 
 // Experience data
 const experienceData = [
