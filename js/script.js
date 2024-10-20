@@ -19,7 +19,7 @@ const skillsContainer = document.querySelector(".skills-container");
 
 skillsData.forEach(skill => {
     const skillElement = document.createElement("div");
-    skillElement.textContent = `${skill.name} - ${skill.level}`;
+    skillElement.textContent = `${skill.name};
     skillsContainer.appendChild(skillElement);
 });
 
@@ -38,24 +38,11 @@ const experienceData = [
         description: "Worked on component development and enhancements. Developed Sling models for components. Developed Sling servlets."
     },
     { 
-        title: "AEM Developer",
-        company: "Wrench Group, Inc.",
-        date: "June 2021 - May 2022",
-        description: "Worked on Junits and code coverages. Worked on bug fixes for components and models. Involved in the development of custom AEM Components."
-    },
-    { 
         title: "Software Developer",
         company: "Capgemini India Pvt. Ltd.",
         date: "Sep 2018 – May 2021",
         description: "Developing a new model called agent search model in which need to search an agent and display the agent details. Writing Junit units for the agent search module. Worked on API consumption through rest template to get agent list. Worked on integrating Google Maps in application to display the agent locations in the map. Working on enhancement of the functionalities in application. Identifying production defects and resolving them."
-    },
-    { 
-        title: "Software Developer",
-        company: "Capgemini India Pvt. Ltd.",
-        date: "Sep 2018 – May 2021",
-        description: "Migrated the services, jars and all the health e-apps from Java 7 to Java 8. Migrated the services, jars and all the health e-apps from artifactories to Nexus repository manager. Resolved production issues. Resolved the bugs and conflicts due to the version changes during the migration work. Documented the local setup process and issues faced along with their fixes. Knowledge transfer sessions for new team members regarding the project and assisted them in resolving issues."
-    },
-    // ... add more experience
+    }
 ];
 
 const experienceContainer = document.querySelector(".experience-container");
@@ -68,6 +55,8 @@ experienceData.forEach(exp => {
     experienceContainer.appendChild(expElement);
 });
 
+// ... (other code)
+
 // Projects data
 const projectsData = [
     {
@@ -78,7 +67,14 @@ const projectsData = [
         name: "Migration work for health e-apps",
         description: "The project is under insurance demand and has different branches like life, health, vehicles etc. The purpose of the project is to maintain and enhance the health branch under health insurance team. These applications provide user interaction for the creation of new policies and updating of existing policies."
     },
-    // ... add more projects
+    {
+        name: "AEM Project (Publicis Sapient)",
+        description: "Developed and enhanced AEM components, including Sling models and servlets. Worked with multifield components and ensured code coverage with Junit tests."
+    },
+    {
+        name: "AEM Project (TA Digital)",
+        description: "Developed and enhanced AEM components, including Sling models and servlets, for ED Tech project." 
+    }
 ];
 
 const projectsContainer = document.querySelector(".projects-container");
@@ -93,9 +89,9 @@ projectsData.forEach(project => {
 // Certifications data
 const certificationsData = [
     "Adobe Certified Expert - Adobe Experience Manager Sites Developer.",
-    "Coursera certificate, Front-end UI frameworks and tools Bootstrap 4.",
     "OCA Java SE8 Programmer certified.",
     "Skill2Lead JavaScript full stack developer certified.",
+    "Coursera certificate, Front-end UI frameworks and tools Bootstrap 4."
     "Coursera Bootstrap 4 Certified.",
     "Coursera Full stack web development React Development certified"
 ];
