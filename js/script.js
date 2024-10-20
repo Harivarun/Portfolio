@@ -99,7 +99,7 @@ const certificationsData = [
     "Adobe Certified Expert - Adobe Experience Manager Sites Developer.",
     "OCA Java SE8 Programmer certified.",
     "Skill2Lead JavaScript full stack developer certified.",
-    "Coursera certificate, Front-end UI frameworks and tools Bootstrap 4."
+    "Coursera certificate, Front-end UI frameworks and tools Bootstrap 4.",
     "Coursera Bootstrap 4 Certified.",
     "Coursera Full stack web development React Development certified"
 ];
