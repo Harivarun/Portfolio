@@ -60,3 +60,23 @@ footer {
     background-color: #343a40; /* Dark background for footer */
     color: white;
 }
+
+.skill-item {
+    display: inline-block; /* Or use flexbox for more layout control */
+    margin: 5px;
+    padding: 8px 12px;
+    background-color: #e9ecef;
+    border-radius: 20px; /* Rounded corners */
+    font-size: 14px;
+}
+
+.skill-name {
+    font-weight: bold;
+    margin-right: 5px;
+}
+
+.skill-level {
+    font-size: 12px;
+    color: #6c757d; /* Slightly lighter color for the level */
+}
+
