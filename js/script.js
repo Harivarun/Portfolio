@@ -15,25 +15,6 @@ const skillsData = [
     // ... add more skills
 ];
 
-// ... (other code)
-
-// Skills data
-const skillsData = [
-    { name: "AEM", level: "Expert" },
-    { name: "Java", level: "Advanced" },
-    { name: "HTML", level: "Advanced" },
-    { name: "CSS", level: "Advanced" },
-    { name: "Bootstrap", level: "Intermediate" },
-    { name: "JavaScript", level: "Intermediate" },
-    { name: "Spring MVC", level: "Intermediate" },
-    { name: "Spring Boot", level: "Intermediate" },
-    { name: "HTL", level: "Advanced" },
-    { name: "JSP", level: "Intermediate" },
-    { name: "MySQL", level: "Basic" },
-    { name: "Oracle", level: "Basic" },
-    // ... add more skills
-];
-
 const skillsContainer = document.querySelector(".skills-container");
 
 skillsData.forEach(skill => {
@@ -48,8 +29,6 @@ skillsData.forEach(skill => {
     
     skillsContainer.appendChild(skillElement);
 });
-
-// ... (rest of your script.js)
 
 
 // Experience data
