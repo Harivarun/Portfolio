@@ -1,0 +1,75 @@
+/* General Styling */
+body {
+    font-family: sans-serif;
+}
+
+/* Header Styling */
+.bg-dark {
+    background-color: #333 !important;
+}
+
+.text-light {
+    color: #fff !important;
+}
+
+header {
+    padding: 2rem 0;
+    text-align: center;
+}
+
+/* Navigation Bar Styling */
+.navbar-light .navbar-nav .nav-link {
+    color: #333;
+}
+
+.navbar-light .navbar-nav .nav-link:hover {
+    color: #007bff;
+}
+
+.sticky-top {
+    top: 0;
+    z-index: 1020;
+    /* Ensure navbar stays on top */
+}
+
+/* About Section Styling */
+#about {
+    padding: 4rem 0;
+}
+
+#about img {
+    max-width: 200px;
+    /* Adjust image size as needed */
+    height: auto;
+}
+
+/* Projects Section Styling */
+#projects {
+    padding: 4rem 0;
+}
+
+.card {
+    transition: transform 0.2s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card-img-top {
+    height: 200px;
+    /* Set a fixed height for project images */
+    object-fit: cover;
+    /* Maintain aspect ratio and cover the area */
+}
+
+/* Contact Section Styling */
+#contact {
+    padding: 4rem 0;
+}
+
+/* Footer Styling */
+footer {
+    padding: 1.5rem 0;
+    text-align: center;
+}
