@@ -8,80 +8,102 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+
   <!-- Navbar -->
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <div class="container">
+    <div class="container-fluid">
       <a class="navbar-brand" href="#">Sri Hari Varun</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link active" href="#about">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#skills">Skills</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#experience">Experience</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#education">Education</a>
+          </li>
+        </ul>
+      </div>
     </div>
   </nav>
 
   <!-- About Me -->
-  <section class="about-me p-5">
+  <section id="about" class="p-5 bg-light">
     <div class="container">
-      <h1 id="about-name" class="text-center">Sri Hari Varun Marubattula</h1>
-      <p id="about-contact" class="text-center"></p>
+      <h1 class="text-center">Sri Hari Varun Marubattula</h1>
+      <p class="text-center"><a href="mailto:mshvarunkumar@gmail.com">mshvarunkumar@gmail.com</a> | +91-9182576649 | Hyderabad, India</p>
+      <p class="text-center lead">5.11 years of experience in developing AEM and web applications with a focus on full-stack Java development, Sling models, and front-end design.</p>
     </div>
   </section>
 
-  <!-- Professional Summary -->
-  <section class="summary p-5">
+  <!-- Skills -->
+  <section id="skills" class="p-5">
     <div class="container">
-      <h2>Professional Summary</h2>
-      <p id="summary-text"></p>
+      <h2 class="text-center mb-4">Skills</h2>
+      <div class="row text-center">
+        <div class="col-md-3">
+          <h5>Programming Languages</h5>
+          <p>Java</p>
+        </div>
+        <div class="col-md-3">
+          <h5>Front-end Technologies</h5>
+          <p>HTML5, CSS, Bootstrap</p>
+        </div>
+        <div class="col-md-3">
+          <h5>CMS</h5>
+          <p>AEM 6.5 & 6.4</p>
+        </div>
+        <div class="col-md-3">
+          <h5>Tools & Technologies</h5>
+          <p>Postman, Jenkins, GIT, PCF</p>
+        </div>
+      </div>
     </div>
   </section>
 
-  <!-- Skills (Table Format) -->
-  <section class="skills p-5">
+  <!-- Experience -->
+  <section id="experience" class="p-5 bg-light">
     <div class="container">
-      <h2>Skills</h2>
-      <table class="table table-striped" id="skills-table">
-        <thead>
-          <tr>
-            <th>Skill</th>
-            <th>Proficiency</th>
-          </tr>
-        </thead>
-        <tbody>
-          <!-- Skills will be loaded here dynamically -->
-        </tbody>
-      </table>
-    </div>
-  </section>
+      <h2 class="text-center mb-4">Professional Experience</h2>
 
-  <!-- Experience (Table Format) -->
-  <section class="experience p-5">
-    <div class="container">
-      <h2>Experience</h2>
-      <table class="table table-striped" id="experience-table">
-        <thead>
-          <tr>
-            <th>Role</th>
-            <th>Company</th>
-            <th>Duration</th>
-          </tr>
-        </thead>
-        <tbody>
-          <!-- Experience will be loaded here dynamically -->
-        </tbody>
-      </table>
+      <div class="job mb-3">
+        <h5>Publicis Sapient (May 2022 - Present) - AEM Developer</h5>
+        <p>Worked on component development, enhancements, Sling models, and servlets. Focused on multifield components, Junits, and code coverage improvements.</p>
+      </div>
+
+      <div class="job mb-3">
+        <h5>TA Digital (June 2021 - May 2022) - AEM Developer</h5>
+        <p>Developed AEM components and Sling models. Worked on multifield components, Junits, and code coverages for various projects.</p>
+      </div>
+
+      <div class="job mb-3">
+        <h5>Capgemini (Sep 2018 - May 2021) - Software Developer</h5>
+        <p>Developed models and integrated Google Maps API for a health insurance project. Migrated services from Java 7 to Java 8 and Artifactory to Nexus.</p>
+      </div>
     </div>
   </section>
 
   <!-- Education -->
-  <section class="education p-5">
+  <section id="education" class="p-5">
     <div class="container">
-      <h2>Education</h2>
-      <p id="education-text"></p>
+      <h2 class="text-center mb-4">Education</h2>
+      <p class="text-center">Bachelor of Technology, Computer Science and Engineering (2014-2018)<br>G. Pullaiah College of Engineering and Technology, Kurnool</p>
     </div>
   </section>
 
   <!-- Footer -->
-  <footer class="bg-dark text-white p-3 text-center">
+  <footer class="bg-dark text-white text-center p-3">
     <p>&copy; 2024 Sri Hari Varun Marubattula. All Rights Reserved.</p>
   </footer>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="js/script.js"></script>
 </body>
 </html>

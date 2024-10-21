@@ -1,41 +1,33 @@
-/* Dark Theme Styles */
 body {
-  background-color: #121212;
-  color: #e0e0e0;
+    font-family: Arial, sans-serif;
 }
 
-.navbar {
-  background-color: #1f1f1f;
+h1,
+h2,
+h5 {
+    color: #333;
 }
 
-.navbar-brand {
-  color: #ffffff;
-}
-
-section {
-  background-color: #1c1c1c;
-  color: #e0e0e0;
-  border-bottom: 1px solid #333;
-}
-
-h1, h2, h3 {
-  color: #ffffff;
-}
-
+p,
 a {
-  color: #bb86fc;
+    color: #666;
 }
 
-.skills ul, .experience ul {
-  list-style-type: none;
-  padding: 0;
+a:hover {
+    color: #333;
 }
 
-.skills li, .experience li {
-  padding: 5px 0;
+#skills .col-md-3 h5 {
+    color: #007bff;
+}
+
+.job h5 {
+    font-weight: bold;
+    color: #333;
 }
 
 footer {
-  background-color: #1f1f1f;
-  color: #bdbdbd;
+    background-color: #343a40;
+    color: #fff;
+}
 }
