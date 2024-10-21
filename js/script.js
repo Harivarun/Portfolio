@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function() {
-  fetch('content/comtent.txt')
+  fetch('content/content.txt')
     .then(response => response.text())
     .then(data => {
       // Split the content into sections based on [Section] headers
