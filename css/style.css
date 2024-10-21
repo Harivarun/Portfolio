@@ -1,82 +1,56 @@
-/* Basic Page Styling */
+/* Dark theme styles */
 body {
-    font-family: 'Roboto', sans-serif; /* Example: Using a Google Font */
+  font-family: Arial, sans-serif;
+  background-color: #121212;
+  color: #e0e0e0;
 }
 
-header {
-
-    padding: 20px 0; /* Adjust padding as needed */
+/* Navbar */
+.navbar {
+  background-color: #1f1f1f;
 }
 
 .navbar-brand {
-    font-weight: bold;
+  color: #ffffff;
 }
 
-.nav-link {
-    color: #333; /* Darker color for nav links */
+/* About Me Section */
+.about-me {
+  background-color: #1e1e1e;
+  color: #e0e0e0;
 }
 
-/* Section Styling */
-section {
-    padding: 40px 0; /* Increased padding for sections */
+/* Sections */
+.summary, .skills, .experience, .education {
+  background-color: #1c1c1c;
+  color: #e0e0e0;
 }
 
-h2 {
-    font-weight: bold;
-    margin-bottom: 20px;
+h1, h2, h3 {
+  color: #ffffff;
 }
 
-/* Skills Styling */
-.skills-container > div {
-    margin-bottom: 10px;
-    background-color: #e9ecef; /* Light gray background for skill items */
-    padding: 10px;
-    border-radius: 5px;
+/* Links */
+a {
+  color: #bb86fc;
 }
 
-/* Experience Styling */
-.experience-container > div {
-    margin-bottom: 20px;
-    border: 1px solid #dee2e6; /* Subtle border for experience items */
-    padding: 15px;
-    border-radius: 5px;
+/* Lists */
+.skills ul, .experience ul {
+  list-style-type: none;
+  padding: 0;
 }
 
-/* Projects Styling (similar to Experience) */
-.projects-container > div {
-    margin-bottom: 20px;
-    border: 1px solid #dee2e6;
-    padding: 15px;
-    border-radius: 5px;
+.skills li, .experience li {
+  padding: 5px 0;
 }
 
-/* Contact Styling */
-#contact p {
-    margin-bottom: 5px;
-}
-
-/* Footer Styling */
+/* Footer */
 footer {
-    background-color: #343a40; /* Dark background for footer */
-    color: white;
+  background-color: #1f1f1f;
+  color: #bdbdbd;
 }
 
-.skill-item {
-    display: inline-block; /* Or use flexbox for more layout control */
-    margin: 5px;
-    padding: 8px 12px;
-    background-color: #e9ecef;
-    border-radius: 20px; /* Rounded corners */
-    font-size: 14px;
+footer a {
+  color: #bb86fc;
 }
-
-.skill-name {
-    font-weight: bold;
-    margin-right: 5px;
-}
-
-.skill-level {
-    font-size: 12px;
-    color: #6c757d; /* Slightly lighter color for the level */
-}
-
