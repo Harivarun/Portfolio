@@ -1,11 +1,9 @@
-/* Dark theme styles */
+/* Dark Theme Styles */
 body {
-  font-family: Arial, sans-serif;
   background-color: #121212;
   color: #e0e0e0;
 }
 
-/* Navbar */
 .navbar {
   background-color: #1f1f1f;
 }
@@ -14,28 +12,20 @@ body {
   color: #ffffff;
 }
 
-/* About Me Section */
-.about-me {
-  background-color: #1e1e1e;
-  color: #e0e0e0;
-}
-
-/* Sections */
-.summary, .skills, .experience, .education {
+section {
   background-color: #1c1c1c;
   color: #e0e0e0;
+  border-bottom: 1px solid #333;
 }
 
 h1, h2, h3 {
   color: #ffffff;
 }
 
-/* Links */
 a {
   color: #bb86fc;
 }
 
-/* Lists */
 .skills ul, .experience ul {
   list-style-type: none;
   padding: 0;
@@ -45,12 +35,7 @@ a {
   padding: 5px 0;
 }
 
-/* Footer */
 footer {
   background-color: #1f1f1f;
   color: #bdbdbd;
-}
-
-footer a {
-  color: #bb86fc;
 }
