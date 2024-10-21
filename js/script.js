@@ -1,112 +1,61 @@
-// Skills data
-const skillsData = [
-    { name: "AEM", level: "Expert" },
-    { name: "Java", level: "Advanced" },
-    { name: "HTML", level: "Advanced" },
-    { name: "CSS", level: "Advanced" },
-    { name: "Bootstrap", level: "Intermediate" },
-    { name: "JavaScript", level: "Intermediate" },
-    { name: "Spring MVC", level: "Intermediate" },
-    { name: "Spring Boot", level: "Intermediate" },
-    { name: "HTL", level: "Advanced" },
-    { name: "JSP", level: "Intermediate" },
-    { name: "MySQL", level: "Basic" },
-    { name: "Oracle", level: "Basic" },
-    // ... add more skills
-];
+document.addEventListener("DOMContentLoaded", function() {
+  fetch('content.txt')
+    .then(response => response.text())
+    .then(data => {
+      // Split the content into sections based on [Section] headers
+      const sections = data.split(/(.+?)\n/).filter(section => section.trim());
 
-const skillsContainer = document.querySelector(".skills-container");
+      // Map to hold section names and corresponding content
+      const contentMap = {};
+      for (let i = 0; i < sections.length; i += 2) {
+        const sectionName = sections[i].trim();
+        const sectionContent = sections[i + 1].trim();
+        contentMap[sectionName] = sectionContent;
+      }
 
-skillsData.forEach(skill => {
-    const skillElement = document.createElement("div");
-    skillElement.classList.add("skill-item"); // Add a class for styling
+      // Populate the "About Me" section
+      if (contentMap['About']) {
+        const aboutLines = contentMap['About'].split('\n');
+        document.getElementById('about-name').textContent = aboutLines[0].trim();
+        document.getElementById('about-contact').textContent = aboutLines[1].trim();
+      }
 
-    // Create the skill name element
-    const skillName = document.createElement("span");
-    skillName.classList.add("skill-name");
-    skillName.textContent = skill.name;
-    skillElement.appendChild(skillName);
-    
-    skillsContainer.appendChild(skillElement);
-});
+      // Populate the "Professional Summary" section
+      if (contentMap['Summary']) {
+        document.getElementById('summary-text').textContent = contentMap['Summary'];
+      }
 
+      // Populate the "Skills" section
+      if (contentMap['Skills']) {
+        const skillsArray = contentMap['Skills'].split('\n');
+        const skillsList = document.getElementById('skills-list');
+        skillsArray.forEach(skill => {
+          if (skill.trim()) {
+            let listItem = document.createElement('li');
+            listItem.textContent = skill.trim();
+            skillsList.appendChild(listItem);
+          }
+        });
+      }
 
-// Experience data
-const experienceData = [
-    { 
-        title: "AEM Developer",
-        company: "Publicis Sapient",
-        date: "May 2022 - Present",
-        description: "Worked on component development and enhancements. Developed Sling models for components. Developed Sling servlets."
-    },
-    { 
-        title: "AEM Developer",
-        company: "Tech Aspect Solutions Pvt. Ltd - TA Digital",
-        date: "June 2021 - May 2022",
-        description: "Worked on component development and enhancements. Developed Sling models for components. Developed Sling servlets."
-    },
-    { 
-        title: "Software Developer",
-        company: "Capgemini India Pvt. Ltd.",
-        date: "Sep 2018 – May 2021",
-        description: "Developing a new model called agent search model in which need to search an agent and display the agent details. Writing Junit units for the agent search module. Worked on API consumption through rest template to get agent list. Worked on integrating Google Maps in application to display the agent locations in the map. Working on enhancement of the functionalities in application. Identifying production defects and resolving them."
-    }
-];
+      // Populate the "Experience" section
+      if (contentMap['Experience']) {
+        const experienceArray = contentMap['Experience'].split('\n');
+        const experienceList = document.getElementById('experience-list');
+        experienceArray.forEach(experience => {
+          if (experience.trim()) {
+            let listItem = document.createElement('li');
+            listItem.textContent = experience.trim();
+            experienceList.appendChild(listItem);
+          }
+        });
+      }
 
-const experienceContainer = document.querySelector(".experience-container");
+      // Populate the "Education" section
+      if (contentMap['Education']) {
+        document.getElementById('education-text').textContent = contentMap['Education'];
+      }
 
-experienceData.forEach(exp => {
-    const expElement = document.createElement("div");
-    expElement.innerHTML = `<h3>${exp.title}</h3>
-                            <p><strong>${exp.company}</strong> - ${exp.date}</p>
-                            <p>${exp.description}</p>`;
-    experienceContainer.appendChild(expElement);
-});
-
-// ... (other code)
-
-// Projects data
-const projectsData = [
-    {
-        name: "Internet Health Rate Quote Application",
-        description: "The project is under insurance domain and has different branches like life, health, vehicles etc. The purpose of the project is to take the details of user, based on the details the quote will be calculated and that will be sending to an agent. Application has two flows for all the states i.e., Hospital income and Medicaid supplement."
-    },
-    {
-        name: "Migration work for health e-apps",
-        description: "The project is under insurance demand and has different branches like life, health, vehicles etc. The purpose of the project is to maintain and enhance the health branch under health insurance team. These applications provide user interaction for the creation of new policies and updating of existing policies."
-    },
-    {
-        name: "AEM Project (Publicis Sapient)",
-        description: "Developed and enhanced AEM components, including Sling models and servlets. Worked with multifield components and ensured code coverage with Junit tests."
-    },
-    {
-        name: "AEM Project (TA Digital)",
-        description: "Developed and enhanced AEM components, including Sling models and servlets, for ED Tech project." 
-    }
-];
-
-const projectsContainer = document.querySelector(".projects-container");
-
-projectsData.forEach(project => {
-    const projectElement = document.createElement("div");
-    projectElement.innerHTML = `<h3>${project.name}</h3>
-                                <p>${project.description}</p>`;
-    projectsContainer.appendChild(projectElement);
-});
-
-// Certifications data
-const certificationsData = [
-    "Adobe Certified Expert - Adobe Experience Manager Sites Developer.",
-    "OCA Java SE8 Programmer certified.",
-    "Skill2Lead JavaScript full stack developer certified.",
-    "Coursera certificate, Front-end UI frameworks and tools Bootstrap 4.",
-    "Coursera Bootstrap 4 Certified.",
-    "Coursera Full stack web development React Development certified"
-];
-
-const certificationsContainer = document.querySelector(".certifications-container"); // Update with your actual container
-certificationsData.forEach(cert => {
-    const certElement = document.createElement("div");
-    certElement.textContent = cert;
-    certificationsContainer.appendChild(certElement);
+    })
+    .catch(error => console.error('Error loading content file:', error));
 });
